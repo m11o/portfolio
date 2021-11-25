@@ -1,10 +1,13 @@
 import React from "react"
 
-import { ChakraProvider } from "@chakra-ui/react"
+import Layout from './components/layouts/main'
 
-const App = () => (
-  <ChakraProvider>
-  </ChakraProvider>
-)
+const App = () => {
+  return (
+    <Layout>
+      <p>Masahito Osako&apos;s Homepage</p>
+    </Layout>
+  )
+}
 
 export default App
