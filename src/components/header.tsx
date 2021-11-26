@@ -1,0 +1,32 @@
+import React from 'react'
+
+import { Box, Heading, Stack, Link, useColorModeValue } from '@chakra-ui/react'
+
+type HeaderLinkProps = {
+  href: string,
+  children?: React.ReactNode
+}
+const HeaderLink: React.FC<HeaderLinkProps> = ({ href, children }) => <Link href={href} p={2}>{children}</Link>
+
+const Header = () => {
+  return (
+    <Box as='header' w='100%' bg={useColorModeValue('#ffffff40', '#20202390')} >
+      <Box as='nav' w='100%' px='32px' h='auto'>
+        <Stack direction={{ base: 'column', md: 'row' }} display={{ base: 'none', md: 'flex' }} justifyContent='end' alignItems='center' flexGrow={1}>
+          <HeaderLink href='/'>TOP</HeaderLink>
+          <HeaderLink href='/works'>Works</HeaderLink>
+          <HeaderLink href='/posts'>Blog</HeaderLink>
+          <HeaderLink href='https://github.com/m11o'>Github</HeaderLink>
+        </Stack>
+      </Box>
+      <Box>
+        <Heading as='h1' textAlign='center' mt='35px' fontFamily='header' fontWeight='bold'>Love Beautiful Code</Heading>
+        <Link textDecoration='none'>
+
+        </Link>
+      </Box>
+    </Box>
+  )
+}
+
+export default Header
