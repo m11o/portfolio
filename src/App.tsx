@@ -1,12 +1,27 @@
 import React from "react"
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route
+} from "react-router-dom"
+
+const Home = () => <h1>Home</h1>
+const Work = () => <h1>Work</h1>
+const Blog = () => <h1>Blog</h1>
 
 import Main from './components/layouts/main'
 
 const App = () => {
   return (
-    <Main>
-      <p>Masahito Osako&apos;s Homepage</p>
-    </Main>
+    <Router>
+      <Main>
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/works' element={<Work />} />
+          <Route path='/posts' element={<Blog />} />
+        </Routes>
+      </Main>
+    </Router>
   )
 }
 
