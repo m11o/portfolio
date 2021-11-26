@@ -5,8 +5,9 @@ import { Box, Heading, Stack, Link, useColorModeValue } from '@chakra-ui/react'
 type HeaderLinkProps = {
   href: string,
   children?: React.ReactNode
+  target?: string
 }
-const HeaderLink: React.FC<HeaderLinkProps> = ({ href, children }) => <Link href={href} p={2}>{children}</Link>
+const HeaderLink: React.FC<HeaderLinkProps> = ({ href, target = '_self', children }) => <Link href={href} p={2} target={target}>{children}</Link>
 
 const Header = () => {
   return (
@@ -16,7 +17,7 @@ const Header = () => {
           <HeaderLink href='/'>TOP</HeaderLink>
           <HeaderLink href='/works'>Works</HeaderLink>
           <HeaderLink href='/posts'>Blog</HeaderLink>
-          <HeaderLink href='https://github.com/m11o'>Github</HeaderLink>
+          <HeaderLink href='https://github.com/m11o' target='_blank'>Github</HeaderLink>
         </Stack>
       </Box>
       <Box>
