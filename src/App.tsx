@@ -1,12 +1,12 @@
 import React from "react"
 
-import Layout from './components/layouts/main'
+import Main from './components/layouts/main'
 
 const App = () => {
   return (
-    <Layout>
+    <Main>
       <p>Masahito Osako&apos;s Homepage</p>
-    </Layout>
+    </Main>
   )
 }
 

@@ -2,6 +2,8 @@ import React from 'react'
 import { Box, Container } from '@chakra-ui/react'
 import { Helmet } from 'react-helmet'
 
+import Header from '../header'
+
 type Props = {
   children?: React.ReactNode
 }
@@ -23,7 +25,9 @@ const Main: React.FC<Props> = ({ children }) => {
       </Helmet>
 
       <Box as='main' pb={8}>
-        <Container maxW='container.md' pt={14}>
+        <Container maxW='container.md' pt={2}>
+          <Header />
+
           {children}
         </Container>
       </Box>
