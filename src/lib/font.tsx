@@ -3,6 +3,10 @@ import { Global } from "@emotion/react"
 
 const Fonts = () => (
   <Global styles={`
+    /*
+      copied: https://fonts.googleapis.com/css2?family=Roboto&family=Dancing+Script:wght@400;700&family=Kosugi+Maru&display=swap
+    */
+
     /* vietnamese */
     @font-face {
       font-family: 'Dancing Script';
