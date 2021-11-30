@@ -8,8 +8,8 @@ const config: ThemeConfig = {
 const fontConfig = {
   fonts: {
     header: 'Dancing Script',
-    body: 'Roboto, Kosugi Maru, Arial, sans-serif',
-    heading: 'Roboto, Kosugi Maru, Arial, sans-serif',
+    body: 'M PLUS Rounded 1c, Kosugi Maru, Roboto, Arial, sans-serif',
+    heading: 'M PLUS Rounded 1c, Kosugi Maru, Roboto, Arial, sans-serif',
     mono: 'Roboto, Kosugi Maru, Arial, sans-serif'
   }
 }

@@ -5,7 +5,8 @@ import {
   Route
 } from "react-router-dom"
 
-const Home = () => <h1>Home</h1>
+import Home from './components/pages/home'
+
 const Work = () => <h1>Work</h1>
 const Blog = () => <h1>Blog</h1>
 

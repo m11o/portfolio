@@ -11,7 +11,7 @@ const HeaderLink: React.FC<HeaderLinkProps> = ({ href, target = '_self', childre
 
 const Header = () => {
   return (
-    <Box as='header' w='100%' bg={useColorModeValue('#ffffff40', '#20202390')} >
+    <Box as='header' w='100%' bg={useColorModeValue('#ffffff40', 'gray.800')} >
       <Box as='nav' w='100%' px='32px' h='auto'>
         <Stack direction={{ base: 'column', md: 'row' }} display={{ base: 'none', md: 'flex' }} justifyContent='end' alignItems='center' flexGrow={1}>
           <HeaderLink href='/'>TOP</HeaderLink>
