@@ -122,7 +122,7 @@ const Love = () => (
 
 const Home = () => {
   return (
-    <Box mt={20}>
+    <Box>
       <Profile />
       <Work />
       <Bio />
