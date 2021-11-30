@@ -17,6 +17,7 @@ const Header = () => {
           <HeaderLink href='/'>TOP</HeaderLink>
           <HeaderLink href='/works'>Works</HeaderLink>
           <HeaderLink href='/posts'>Blog</HeaderLink>
+          <HeaderLink href='/posts'>Resume</HeaderLink>
           <HeaderLink href='https://github.com/m11o' target='_blank'>Github</HeaderLink>
         </Stack>
       </Box>
