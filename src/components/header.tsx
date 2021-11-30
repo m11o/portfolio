@@ -23,9 +23,6 @@ const Header = () => {
       </Box>
       <Box>
         <Heading as='h1' textAlign='center' mt='35px' fontFamily='header' fontWeight='bold'>Love Beautiful Code</Heading>
-        <Link textDecoration='none'>
-
-        </Link>
       </Box>
     </Box>
   )
