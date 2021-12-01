@@ -9,7 +9,7 @@ type panelContainerProps = {
 }
 
 const PanelContainer: React.FC<panelContainerProps> = ({ title, children, icon = null }) => (
-  <Flex flexDirection='column' alignItems='flex-start' mt={5} px={5} py={2}>
+  <Flex flexDirection='column' alignItems='flex-start' mt={10} px={5} py={2}>
     <Heading size='md' as='h4' borderBottomWidth='3px' borderBottomColor='#ddd' mb={4}>
       {title}
       {icon ? icon : ''}
