@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 
 import ReactMarkdown from 'react-markdown'
+import gfm from 'remark-gfm'
 import ChakraUIRenderer from 'chakra-ui-markdown-renderer'
 
 import * as ResumeMarkdownPath from '../../assets/resume.md'
@@ -19,7 +20,7 @@ const Resume = () => {
   })
 
   return (
-    <ReactMarkdown components={ChakraUIRenderer(markdownTheme)} skipHtml >
+    <ReactMarkdown components={ChakraUIRenderer(markdownTheme)} remarkPlugins={[gfm]} skipHtml >
       {markdown}
     </ReactMarkdown>
   )
