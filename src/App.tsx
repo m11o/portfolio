@@ -7,9 +7,9 @@ import {
 
 import Home from './components/pages/home'
 import Resume from "./components/pages/resume"
+import BlogList from "./components/pages/blog/list"
 
 const Work = () => <h1>Work</h1>
-const Blog = () => <h1>Blog</h1>
 
 import Main from './components/layouts/main'
 
@@ -20,7 +20,7 @@ const App = () => {
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/works' element={<Work />} />
-          <Route path='/posts' element={<Blog />} />
+          <Route path='/posts' element={<BlogList />} />
           <Route path='/resume' element={<Resume />} />
         </Routes>
       </Main>
