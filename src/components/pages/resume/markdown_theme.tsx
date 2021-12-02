@@ -22,11 +22,11 @@ const headingTheme: React.FC<headingThemeProps> = (props, as) => {
 }
 
 const markdownTheme = {
-  h1: (props: any) => headingTheme(props, 'h1'),
-  h2: (props: any) => headingTheme(props, 'h2'),
-  h3: (props: any) => headingTheme(props, 'h3'),
-  h4: (props: any) => headingTheme(props, 'h4'),
-  h5: (props: any) => headingTheme(props, 'h5'),
-  h6: (props: any) => headingTheme(props, 'h6'),
+  h1: (props: headingThemeProps) => headingTheme(props, 'h1'),
+  h2: (props: headingThemeProps) => headingTheme(props, 'h2'),
+  h3: (props: headingThemeProps) => headingTheme(props, 'h3'),
+  h4: (props: headingThemeProps) => headingTheme(props, 'h4'),
+  h5: (props: headingThemeProps) => headingTheme(props, 'h5'),
+  h6: (props: headingThemeProps) => headingTheme(props, 'h6'),
 }
 export default markdownTheme
