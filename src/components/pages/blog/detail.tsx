@@ -51,7 +51,6 @@ const BlogDetail = () => {
         <SyntaxHighlighter style={atomOneDark} customStyle={{ margin: '18px 0' }} language={language} codeTagProps={{ style: { padding: '10px 5px' } }}>
           {children}
         </SyntaxHighlighter>
-        // <Code className={className} whiteSpace='break-spaces' d='block' overflowX='auto' p={4} my={4} rounded={3}>{children}</Code>
       )
     }
   }
