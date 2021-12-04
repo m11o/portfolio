@@ -19,18 +19,14 @@ const Work = () => {
           setWorks(response.items)
           if (!response.items.length) return
 
-          const links: { [s: string]: string } = {}
           response.items.forEach(async (work: any) => {
             const { thumbnail } = work.fields
-            console.log(thumbnail)
             if (!thumbnail) return
 
             const thumbnail_id: string = thumbnail.sys.id
             await contentfulClient.getAsset(thumbnail_id)
               .then(response => {
                 setThumbnailLinks((prevLinks: any) => {
-                  console.log(prevLinks)
-                  console.log(response.fields)
                   prevLinks[thumbnail_id] = response.fields.file.url
                   return prevLinks
                 })
@@ -40,9 +36,8 @@ const Work = () => {
         })
         .catch(err => console.error(err))
     }
+    f()
   }, [])
-
-  console.log(thumbnailLinks)
 
   return (
     works.length ? (
