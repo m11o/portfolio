@@ -27,7 +27,7 @@ const skills: { [s: string]: number } = {
   'Python3': 80,
   'Docker': 65,
 }
-const Skill = () => (
+const Skill: React.FC = () => (
   <PanelContainer title='Skills'>
     <Flex w='100%' flexDirection='column' alignItems='flex-start'>
       {Object.keys(skills).map(key => <SkillContent name={key} value={skills[key]} key={key} />)}

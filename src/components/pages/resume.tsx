@@ -7,7 +7,7 @@ import ChakraUIRenderer from 'chakra-ui-markdown-renderer'
 import * as ResumeMarkdownPath from '../../assets/resume.md'
 import markdownTheme from '../../lib/markdown_theme'
 
-const Resume = () => {
+const Resume: React.FC = () => {
   const [markdown, setMarkdown] = useState('')
 
   useEffect(() => {

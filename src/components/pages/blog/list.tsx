@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { Text, LinkBox, LinkOverlay, Heading, Flex, Box, Tag } from '@chakra-ui/react'
 
+import { EntryFields } from 'contentful'
+
 import contentfulClient from '../../../lib/contentful_client'
 
 type blogCardProps = {
@@ -33,9 +35,9 @@ const BlogCard: React.FC<blogCardProps> = ({ id, title, tags, description='', up
   )
 }
 
-const BlogList = () => {
-  const [posts, setPosts] = useState<any>([])
-  const [page, setPage] = useState(1)
+const BlogList: React.FC = () => {
+  const [posts, setPosts] = useState<EntryFields.Array<EntryFields.Object>>([])
+  const [page] = useState(1)
 
   useEffect(() => {
     const f = async () => {
@@ -54,12 +56,15 @@ const BlogList = () => {
 
   return (
     posts.length ? (
-      posts.map((post: any) => {
-        const { id, updatedAt } = post.sys
-        const { title, description, tags } = post.fields
+      <>
+        {posts.map((post: EntryFields.Object) => {
+          const { id, updatedAt } = post.sys
+          const { title, description, tags } = post.fields
 
-        return <BlogCard key={id} id={id} title={title} description={description} tags={tags} updatedAt={updatedAt} />
-      })
+          return <BlogCard key={id} id={id} title={title} description={description} tags={tags} updatedAt={updatedAt} />
+        })
+      }
+      </>
     ) : (
       <Text fontSize='sm' color='gray.400' textAlign='center'>現在、表示できる記事が存在しません</Text>
     )

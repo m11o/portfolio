@@ -3,7 +3,7 @@ import React from 'react'
 import { Flex, Box, Heading, Text, Avatar, useBreakpointValue } from '@chakra-ui/react'
 import ProfileIcon from '../../../assets/portfolio_icon1.jpg'
 
-const Profile = () => {
+const Profile: React.FC = () => {
   const avatarSize = useBreakpointValue({ base: 'xl', md: '2xl' })
 
   return (

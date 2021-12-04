@@ -1,5 +1,7 @@
 import React from 'react'
 import { Heading } from "@chakra-ui/react";
+import { Components } from 'react-markdown'
+import { HeadingProps } from 'react-markdown/lib/ast-to-react'
 
 type headingThemeProps = {
   level: number,
@@ -21,12 +23,12 @@ const headingTheme: React.FC<headingThemeProps> = (props, as) => {
   )
 }
 
-const markdownTheme = {
-  h1: (props: headingThemeProps) => headingTheme(props, 'h1'),
-  h2: (props: headingThemeProps) => headingTheme(props, 'h2'),
-  h3: (props: headingThemeProps) => headingTheme(props, 'h3'),
-  h4: (props: headingThemeProps) => headingTheme(props, 'h4'),
-  h5: (props: headingThemeProps) => headingTheme(props, 'h5'),
-  h6: (props: headingThemeProps) => headingTheme(props, 'h6'),
+const markdownTheme: Components = {
+  h1: (props: HeadingProps) => headingTheme(props, 'h1'),
+  h2: (props: HeadingProps) => headingTheme(props, 'h2'),
+  h3: (props: HeadingProps) => headingTheme(props, 'h3'),
+  h4: (props: HeadingProps) => headingTheme(props, 'h4'),
+  h5: (props: HeadingProps) => headingTheme(props, 'h5'),
+  h6: (props: HeadingProps) => headingTheme(props, 'h6'),
 }
 export default markdownTheme

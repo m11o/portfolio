@@ -4,7 +4,7 @@ import { PanelContainer } from './common'
 import { Text, Center, Button } from '@chakra-ui/react'
 import { ArrowForwardIcon } from '@chakra-ui/icons'
 
-const Work = () => (
+const Work: React.FC = () => (
   <PanelContainer title='Works'>
     <Text>
       九州大学を休学し、東京でインターン生としてエンジニアの世界に入ったあと、フルスタックエンジニアとしてメディアやECなどの様々なシステムに携わらせていただきました。復学後もお世話になった企業様からお仕事をいただき、さらに技術力を磨いてきました。<br />

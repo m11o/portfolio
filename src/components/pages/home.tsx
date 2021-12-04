@@ -8,7 +8,7 @@ import Bio from './home/bio'
 import Skill from './home/skill'
 import Love from './home/love'
 
-const Home = () => {
+const Home: React.FC = () => {
   return (
     <Box>
       <Profile />

@@ -17,7 +17,7 @@ const BioItem: React.FC<bioItemProps> = ({ year, children }) => (
 
 const SHOBON_ACTION_URL = 'https://apps.apple.com/jp/app/%E3%81%97%E3%82%87%E3%81%BC%E3%82%93%E3%81%AE%E3%82%A2%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3-%E3%82%AA%E3%83%AA%E3%82%B8%E3%83%8A%E3%83%AB/id894330337'
 
-const Bio = () => (
+const Bio: React.FC = () => (
   <PanelContainer title='Bio'>
     <Flex w='100%' flexDirection='column' alignItems='flex-start'>
       <BioItem year='1997'>鹿児島県南九州市に誕生</BioItem>

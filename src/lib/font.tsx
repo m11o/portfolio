@@ -1,7 +1,7 @@
 import React from 'react'
 import { Global } from "@emotion/react"
 
-const Fonts = () => (
+const Fonts: React.FC = () => (
   <Global styles={`
     /*
       copied: https://fonts.googleapis.com/css2?family=Roboto&family=Dancing+Script:wght@400;700&family=Kosugi+Maru&display=swap

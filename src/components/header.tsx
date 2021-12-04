@@ -9,7 +9,7 @@ type HeaderLinkProps = {
 }
 const HeaderLink: React.FC<HeaderLinkProps> = ({ href, target = '_self', children }) => <Link href={href} p={2} target={target}>{children}</Link>
 
-const Header = () => {
+const Header: React.FC = () => {
   return (
     <Box as='header' w='100%' bg={useColorModeValue('#ffffff40', 'gray.800')} >
       <Box as='nav' w='100%' px='32px' h='auto'>

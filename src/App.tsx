@@ -13,7 +13,7 @@ import Work from "./components/pages/work"
 
 import Main from './components/layouts/main'
 
-const App = () => {
+const App: React.FC = () => {
   return (
     <Router>
       <Main>
