@@ -10,22 +10,22 @@ const Work: React.FC = () => {
   const [thumbnailLinks, setThumbnailLinks] = useState<{ [key: string]: string }>({})
 
   useEffect(() => {
-    const f = async () => {
+    const f = () => {
       const query = {
         content_type: 'work',
-        order: '-sys.createdat'
+        order: '-sys.createdAt'
       }
-      await contentfulClient.getEntries(query)
+      contentfulClient.getEntries(query)
         .then((response: EntryFields.Object) => {
           setWorks(response.items)
           if (!response.items.length) return
 
-          response.items.forEach(async (work: Entry<EntryFields.Object>) => {
+          response.items.forEach((work: Entry<EntryFields.Object>) => {
             const { thumbnail } = work.fields
             if (!thumbnail) return
 
             const thumbnail_id: string = thumbnail.sys.id
-            await contentfulClient.getAsset(thumbnail_id)
+            contentfulClient.getAsset(thumbnail_id)
               .then((response: Asset) => {
                 setThumbnailLinks((prevLinks: { [key: string]: string }) => {
                   prevLinks[thumbnail_id] = response.fields.file.url
@@ -45,17 +45,13 @@ const Work: React.FC = () => {
       <>
         {works.map((work: EntryFields.Object) => {
           const { name, thumbnail, libs, link, description } = work.fields
-          if (thumbnail) {
-            const thumbnaillink = thumbnailLinks[thumbnail.sys.id]
-            console.log(thumbnaillink)
-          }
 
           return (
             <Box key={name} w='100%'>
               <Heading as='h1' size='md' mb={8}>ポートフォリオ</Heading>
               <Flex direction='row' justifycontent='space-between'>
                 <LinkBox as='article' borderWidth='3px' rounded='md' h='auto' maxH={{ base: '300px', md: '450px' }} w={{ base: '100%', md: '45%' }}>
-                  <Image borderbottomwidth='2px' src={thumbnail?.sys?.id ? (thumbnailLinks[thumbnail.sys.id]) : PortfolioIcon} bordertopradius='md' h='50%' w='100%' fit='cover' />
+                  <Image borderbottomwidth='2px' src={thumbnail && thumbnail.sys.id ? (thumbnailLinks[thumbnail.sys.id]) : PortfolioIcon} bordertopradius='md' h='50%' w='100%' fit='cover' />
                   <Box p={4}>
                     <Heading as='h4' size='md' mb={2}>
                       <LinkOverlay href={link}>
