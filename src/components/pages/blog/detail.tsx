@@ -54,7 +54,7 @@ const BlogDetail: React.FC = () => {
             padding: '10px',
             margin: '15px 0',
             display: 'block',
-            backgroundColor: '#444',
+            backgroundColor: 'gray.600',
             borderRadius: '3px',
             overflowX: 'auto'
           } }}
@@ -69,8 +69,8 @@ const BlogDetail: React.FC = () => {
 
   return (
     <>
-      <Box mb={20}>
-        <Heading as='h1' size='xl' mb={4}>{post.title}</Heading>
+      <Box mb={{ base: 10, md: 20 }}>
+        <Heading as='h1' size='xl' mb={{ base: 2, md: 4 }}>{post.title}</Heading>
         <Flex justifyContent='space-between' alignItems='flex-end'>
           <Box>
             {post.tags.length ? (post.tags.map((tag) => <Tag key={tag} mx={1} my={1}>{tag}</Tag>)) : ''}
