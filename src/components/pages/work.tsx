@@ -72,7 +72,7 @@ export default class Work extends React.Component<WorkProps, WorkState> {
               <Box key={name} w='100%'>
                 <Heading as='h1' size='md' mb={8}>ポートフォリオ</Heading>
                 <Flex direction='row' justifycontent='space-between'>
-                  <LinkBox as='article' borderWidth='3px' rounded='md' h='auto' maxH={{ base: '300px', md: '450px' }} w={{ base: '100%', md: '45%' }}>
+                  <LinkBox as='article' borderWidth='3px' rounded='md' h='auto' maxH={{ base: '400px', md: '450px' }} w={{ base: '100%', md: '45%' }}>
                     <Image borderbottomwidth='2px' src={thumbnail && thumbnail.sys.id ? (this.state.thumbnailLinks[thumbnail.sys.id]) : PortfolioIcon} bordertopradius='md' h='50%' w='100%' fit='cover' />
                     <Box p={4}>
                       <Heading as='h4' size='md' mb={2}>
