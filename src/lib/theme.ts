@@ -1,5 +1,4 @@
 import { extendTheme, ThemeConfig } from "@chakra-ui/react";
-import style from "react-syntax-highlighter/dist/esm/styles/hljs/a11y-dark";
 
 const config: ThemeConfig = {
   initialColorMode: 'dark',

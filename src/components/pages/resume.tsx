@@ -6,7 +6,6 @@ import gfm from 'remark-gfm'
 import ChakraUIRenderer from 'chakra-ui-markdown-renderer'
 import { Button, Center } from '@chakra-ui/react'
 import { DownloadIcon } from '@chakra-ui/icons'
-import _ from 'lodash'
 
 import * as ResumeMarkdownPath from '../../assets/resume.md'
 import markdownTheme from '../../lib/markdown_theme'
