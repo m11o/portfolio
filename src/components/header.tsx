@@ -35,7 +35,7 @@ const Header: React.FC = () => {
         </Box>
       </Box>
       <Box>
-        <Heading as='h1' textAlign='center' mt={40} mb={20} fontFamily='header' fontWeight='bold'>Love Beautiful Code</Heading>
+        <Heading as='h1' textAlign='center' mt={{ base: 20, md: 40 }} mb={20} fontFamily='header' fontWeight='bold'>Love Beautiful Code</Heading>
       </Box>
     </Box>
   )
