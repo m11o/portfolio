@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { PanelContainer } from './common'
-import { Text, Center, Button } from '@chakra-ui/react'
+import { Text, Center, Button, Link } from '@chakra-ui/react'
 import { ArrowForwardIcon } from '@chakra-ui/icons'
 
 const Work: React.FC = () => (
@@ -11,7 +11,7 @@ const Work: React.FC = () => (
       現在、大学にて4回生になり研究室配属されると、仕事の方はお休みさせていただきましたが、これまで培ったエンジニアの知識を用いて、マウスの神経活動データをリアルタイムで取得し、機械学習等で解析を行っております。また、神経活動のリアルタイムデータを取得するライブラリは発展途上のため、時間を見つけてコミットしております。
     </Text>
     <Center w='100%' mt={4}>
-      <Button variant='solid' size='md' colorScheme='whatsapp' rightIcon={<ArrowForwardIcon />}>Portfolio</Button>
+      <Button as={Link} href='/works' variant='solid' size='md' colorScheme='whatsapp' rightIcon={<ArrowForwardIcon />}>Portfolio</Button>
     </Center>
   </PanelContainer>
 )
