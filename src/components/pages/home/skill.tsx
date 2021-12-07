@@ -9,11 +9,11 @@ type skillContentProps = {
 }
 const SkillContent: React.FC<skillContentProps> = ({ name, value }) => (
   <Flex w='100%' alignItems='center' mb={4}>
-    <Text mr={5} fontWeight='bold' w={40}>{name}</Text>
+    <Text mr={{ base: 2, md: 5 }} fontWeight='bold' w={{ base: '170px', md: 40 }} fontSize={{ base: 'sm', md: 'md' }}>{name}</Text>
     <Box w='100%' mr={2}>
       <Progress value={value} max={100} min={0} hasStripe colorScheme='gray' />
     </Box>
-    <Text fontWeight='bold'>{`${value}%`}</Text>
+    <Text fontWeight='bold' fontSize={{ base: 'sm', md: 'md' }}>{`${value}%`}</Text>
   </Flex>
 )
 const skills: { [s: string]: number } = {
