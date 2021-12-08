@@ -23,7 +23,7 @@ const ResumeContent = forwardRef<HTMLDivElement>((_, ref) => {
   })
 
   return (
-    <div ref={ref} style={{ marginBottom: '50px' }}>
+    <div ref={ref} style={{ marginBottom: '50px' }} className='resume-content'>
       <ReactMarkdown components={ChakraUIRenderer(markdownTheme)} remarkPlugins={[gfm]} skipHtml>
         {markdown}
       </ReactMarkdown>

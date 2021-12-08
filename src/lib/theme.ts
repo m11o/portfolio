@@ -1,4 +1,4 @@
-import { extendTheme, ThemeConfig } from "@chakra-ui/react";
+import { extendTheme, ThemeConfig, useMediaQuery } from "@chakra-ui/react"
 
 const config: ThemeConfig = {
   initialColorMode: 'dark',
@@ -15,6 +15,25 @@ const styleConfig = {
 
         'td, th': {
           borderBottom: '1px #555 solid'
+        }
+      },
+      '.resume-content': {
+        '@media screen and (max-width: 48em)': {
+          table: {
+            thead: {
+              display: 'none',
+            },
+            tbody: {
+              tr: {
+                display: 'flex',
+                'flex-direction': 'column',
+
+                td: {
+                  padding: 2
+                }
+              }
+            }
+          }
         }
       }
     }
