@@ -2,13 +2,14 @@ import React from 'react'
 
 import { Box, Heading, Stack, Link, useColorModeValue, Button, Menu, MenuButton, MenuList, MenuItem, IconButton, useColorMode } from '@chakra-ui/react'
 import { HamburgerIcon, SunIcon, MoonIcon } from '@chakra-ui/icons'
+import { NavLink } from 'react-router-dom'
 
 type HeaderLinkProps = {
   href: string,
   children?: React.ReactNode
   target?: string
 }
-const HeaderLink: React.FC<HeaderLinkProps> = ({ href, target = '_self', children }) => <Link href={href} p={2} target={target}>{children}</Link>
+const HeaderLink: React.FC<HeaderLinkProps> = ({ href, target = '_self', children }) => <NavLink to={href} style={{ padding: '8px' }} target={target}>{children}</NavLink>
 
 const Header: React.FC = () => {
   const { colorMode, toggleColorMode } = useColorMode()
@@ -27,11 +28,11 @@ const Header: React.FC = () => {
           <Menu isLazy>
             <MenuButton icon={<HamburgerIcon />} as={IconButton} variant='outline' />
             <MenuList>
-              <MenuItem as={Link} href='/'>TOP</MenuItem>
-              <MenuItem as={Link} href='/works'>Works</MenuItem>
-              <MenuItem as={Link} href='/posts'>Blogs</MenuItem>
-              <MenuItem as={Link} href='/resume'>Resume</MenuItem>
-              <MenuItem as={Link} href='https://github.com/m11o' target='_blank'>Github</MenuItem>
+              <MenuItem as={NavLink} to='/'>TOP</MenuItem>
+              <MenuItem as={NavLink} to='/works'>Works</MenuItem>
+              <MenuItem as={NavLink} to='/posts'>Blogs</MenuItem>
+              <MenuItem as={NavLink} to='/resume'>Resume</MenuItem>
+              <MenuItem as={NavLink} to='https://github.com/m11o' target='_blank'>Github</MenuItem>
             </MenuList>
           </Menu>
         </Box>
