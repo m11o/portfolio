@@ -1,9 +1,9 @@
 import React from 'react'
 
 import { PanelContainer } from './common'
-import { Text, Center, Button, Link } from '@chakra-ui/react'
+import { Text, Center, Button } from '@chakra-ui/react'
 import { ArrowForwardIcon } from '@chakra-ui/icons'
-import { Link as RouteLink } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 const Work: React.FC = () => (
   <PanelContainer title='Works'>
@@ -13,7 +13,7 @@ const Work: React.FC = () => (
     </Text>
     <Center w='100%' mt={4}>
       <Button variant='solid' size='md' colorScheme='whatsapp' rightIcon={<ArrowForwardIcon />}>
-        <RouteLink to='/works'>Portfolio</RouteLink>
+        <Link to='/works'>Portfolio</Link>
       </Button>
     </Center>
   </PanelContainer>
