@@ -1,6 +1,6 @@
 import React from "react"
 import {
-  BrowserRouter,
+  HashRouter,
   Routes,
   Route
 } from "react-router-dom"
@@ -15,7 +15,7 @@ import Main from './components/layouts/main'
 
 const App: React.FC = () => {
   return (
-    <BrowserRouter basename={process.env.PUBLIC_URL}>
+    <HashRouter basename={process.env.PUBLIC_URL}>
       <Main>
         <Routes>
           <Route path='/' element={<Home />} />
@@ -25,7 +25,7 @@ const App: React.FC = () => {
           <Route path='/resume' element={<Resume />} />
         </Routes>
       </Main>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
 
