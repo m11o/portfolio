@@ -4,18 +4,18 @@
     "main.js.map": "/static/js/main.de71997f.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.5aafb2db.js",
     "runtime-main.js.map": "/static/js/runtime-main.5aafb2db.js.map",
-    "static/js/2.b6b853e6.chunk.js": "/static/js/2.b6b853e6.chunk.js",
-    "static/js/2.b6b853e6.chunk.js.map": "/static/js/2.b6b853e6.chunk.js.map",
+    "static/js/2.ad9e8d50.chunk.js": "/static/js/2.ad9e8d50.chunk.js",
+    "static/js/2.ad9e8d50.chunk.js.map": "/static/js/2.ad9e8d50.chunk.js.map",
     "static/js/3.cd698cf6.chunk.js": "/static/js/3.cd698cf6.chunk.js",
     "static/js/3.cd698cf6.chunk.js.map": "/static/js/3.cd698cf6.chunk.js.map",
     "index.html": "/index.html",
-    "static/js/2.b6b853e6.chunk.js.LICENSE.txt": "/static/js/2.b6b853e6.chunk.js.LICENSE.txt",
+    "static/js/2.ad9e8d50.chunk.js.LICENSE.txt": "/static/js/2.ad9e8d50.chunk.js.LICENSE.txt",
     "static/media/portfolio_icon1.5e526111.jpg": "/static/media/portfolio_icon1.5e526111.jpg",
     "static/media/resume.598d0c0f.md": "/static/media/resume.598d0c0f.md"
   },
   "entrypoints": [
     "static/js/runtime-main.5aafb2db.js",
-    "static/js/2.b6b853e6.chunk.js",
+    "static/js/2.ad9e8d50.chunk.js",
     "static/js/main.de71997f.chunk.js"
   ]
 }
