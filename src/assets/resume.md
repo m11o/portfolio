@@ -7,8 +7,8 @@
 | **氏名** | 大迫 雅仁 (Masahito Osako) |
 | **Github** | [https://github.com/masahito1997](https://github.com/masahito1997) |
 | **Qiita** | [https://qiita.com/m11o](https://qiita.com/m11o) |
-| **Homepage** | [https://m11o.com/](https://m11o.com) |
-| **Blog** | [https://m11o.com/blog](https://m11o.com/blog) |
+| **Homepage** | [https://portfolio.m11o.com/](https://portfolio.m11o.com) |
+| **Blog** | [https://portfolio.m11o.com/posts](https://portfolio.m11o.com/posts) |
 
 ## 概要
 
