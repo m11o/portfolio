@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Box, Heading, Stack, useColorModeValue, Button, Menu, MenuButton, MenuList, MenuItem, IconButton, useColorMode } from '@chakra-ui/react'
+import { Box, Heading, Stack, useColorModeValue, Button, Menu, MenuButton, MenuList, MenuItem, IconButton, useColorMode, Link as ChakraLink } from '@chakra-ui/react'
 import { HamburgerIcon, SunIcon, MoonIcon } from '@chakra-ui/icons'
 import { Link } from 'react-router-dom'
 
@@ -9,7 +9,9 @@ type HeaderLinkProps = {
   children?: React.ReactNode
   target?: string
 }
-const HeaderLink: React.FC<HeaderLinkProps> = ({ href, target = '_self', children }) => <Link to={href} style={{ padding: '8px' }} target={target}>{children}</Link>
+const HeaderLink: React.FC<HeaderLinkProps> = ({ href, target = '_self', children }) => {
+  return target == '_blank' ? <ChakraLink href={href} isExternal>{children}</ChakraLink> : <Link to={href} style={{ padding: '8px' }} target={target}>{children}</Link>
+}
 
 const Header: React.FC = () => {
   const { colorMode, toggleColorMode } = useColorMode()
