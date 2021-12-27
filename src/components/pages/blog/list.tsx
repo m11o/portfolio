@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import { Text, LinkBox, LinkOverlay, Heading, Flex, Box, Tag } from '@chakra-ui/react'
+import { Text, LinkBox, Heading, Flex, Box, Tag } from '@chakra-ui/react'
+import { Link } from 'react-router-dom'
 
 import { EntryFields } from 'contentful'
 
@@ -20,9 +21,7 @@ const BlogCard: React.FC<blogCardProps> = ({ id, title, tags, description='', up
       rounded: 'md'
     }}>
       <Heading size='lg' as='h3' mb={3}>
-        <LinkOverlay href={`/posts/${id}`}>
-          {title}
-        </LinkOverlay>
+        <Link to={`/posts/${id}`}>{title}</Link>
       </Heading>
       <Text fontSize='md' mb={2} noOfLines={[5, 3]}>{description}</Text>
       <Flex direction='row' justifyContent='space-between' alignItems='flex-end'>
