@@ -45,7 +45,7 @@ const fontConfig = {
     header: 'Dancing Script',
     body: '"M PLUS Rounded 1c", "Kosugi Maru", Roboto, Arial, sans-serif',
     heading: '"M PLUS Rounded 1c", "Kosugi Maru", Roboto, Arial, sans-serif',
-    mono: 'Roboto, Kosugi Maru, Arial, sans-serif'
+    mono: '"Roboto Mono", "Kosugi Maru", Arial, sans-serif'
   }
 }
 
