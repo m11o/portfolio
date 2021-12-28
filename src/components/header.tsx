@@ -24,7 +24,7 @@ const Header: React.FC = () => {
           <HeaderLink href='/works'>Works</HeaderLink>
           <HeaderLink href='/posts'>Blog</HeaderLink>
           <HeaderLink href='/resume'>Resume</HeaderLink>
-          <HeaderLink href='https://github.com/m11o' target='_blank'>Github</HeaderLink>
+          <HeaderLink href='https://github.com/masahito1997' target='_blank'>Github</HeaderLink>
         </Stack>
         <Box justifyContent='flex-end' display={{ base: 'flex', md: 'none' }}>
           <Menu isLazy>
